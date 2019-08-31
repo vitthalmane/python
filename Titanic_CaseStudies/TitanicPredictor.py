@@ -11,7 +11,7 @@ from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
-def MarvellousTitanicLogistic():
+def VitthalTitanicLogistic():
     #step 1 Load dataset
     titanic_data = pd.read_csv("MarvellouTitanicDataset.csv")
 
@@ -26,30 +26,30 @@ def MarvellousTitanicLogistic():
     target="Survied"
 
     countplot(data=titanic_data, x=target).set_title(
-        "Marvellous Infosystems: Survied and non survied passengers ")
+        " Survied and non survied passengers ")
     show()
 
     print("Visualization:Servied and non survied passengers based on gender")
     figure()
     target="Survied"
-    countplot(data=titanic_data, x=target,hue="Sex").set_title("Marvellous Infosystems: Survied and non survied passengers Based on Gender")
+    countplot(data=titanic_data, x=target,hue="Sex").set_title("Survied and non survied passengers Based on Gender")
     show()
 
     print("Visualization:Servied and non survied passenger class")
     figure()
     target="Survied"
 
-    countplot(data=titanic_data, x=target,hue="Pclass").set_title("Marvellous Infosystems: Survied and non survied passengers Based on Passenger class")
+    countplot(data=titanic_data, x=target,hue="Pclass").set_title("Survied and non survied passengers Based on Passenger class")
     show()
 
     print("Visualization:Servied and non survied passenger based on Age")
     figure()
-    titanic_data['Age'].plot.hist().set_title("Marvellous Infosystems: Survied and non survied passengers Based on Age")
+    titanic_data['Age'].plot.hist().set_title("Survied and non survied passengers Based on Age")
     show()
 
     print("Visualization:Servied and non survied passenger based on Fair")
     figure()
-    titanic_data['Fare'].plot.hist().set_title("Marvellous Infosystems: Survied and non survied passengers Based on Fare")
+    titanic_data['Fare'].plot.hist().set_title("Survied and non survied passengers Based on Fare")
     show()
 
 
@@ -108,7 +108,7 @@ def main():
     print("Supervised machine Learning")
     print("Logistic Regression on Titanic data set")
 
-    MarvellousTitanicLogistic()
+    VitthalTitanicLogistic()
 
 if __name__=="__main__":
     main()
