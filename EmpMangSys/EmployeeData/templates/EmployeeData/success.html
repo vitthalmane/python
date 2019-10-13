@@ -1,0 +1,40 @@
+{%load static %}
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Employee Registration</title>
+      <link rel="stylesheet" type="text/css" href="{%static 'EmployeeData/css/style.css' %} " >
+    </head>
+    <body>
+	<script src="{%static 'EmployeeData/validateEmpRegstForm.js' %}"></script>
+
+      <div class="header">
+	     <h2>Employee Registration Form</h2>
+		</div>
+		<form name="myForm" onsubmit="return validateForm()" method="post" action="#" > {% csrf_token %}
+		<div class="input-group">
+		<label><i>Employee Name:</i></label>
+		<input type="text" name="emp_name"  >
+		</div>
+		
+       	 <div class="input-group">
+		<label><i>Email Address:</i></label>
+		<input type="email" name="email"  required>
+		</div>
+	 <div class="input-group">
+		<label><i>Phone Number:</i></label>
+		<input type="tel" name="mob_no" >
+		</div>
+	<div class="input-group">
+		<label><i>Department:</i></label>
+		<input type="text" name="department" >
+		</div>
+		<div class="input-group">
+		<button type="submit" name="login" class="btn"><b>Submit</b></button>
+		</div>
+		
+		</form>
+	
+    </body>`
+
+  </html>

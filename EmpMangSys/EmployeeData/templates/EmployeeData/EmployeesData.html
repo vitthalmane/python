@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EmployeeData</title>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+  width: 70%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 25%;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="{%static 'EmployeeData/css/style.css' %} " >
+</head>
+<body>
+
+<br>
+<table><center> <h1>Employee Data</h1></center><br>
+  <tr>
+    <th>Employee Name</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+<th> Department</th>
+  </tr>
+  {% for stored_empData in Emp_savedData %}
+  <tr>
+    <td>{{ stored_empData.Emp_name}}</td>
+    <td>{{ stored_empData.Emp_email}} </td>
+    <td>{{ stored_empData.Emp_phonNO}}</td> 
+    <td>{{ stored_empData.Emp_dept}}</td> 
+  </tr>
+
+  {% endfor %}
+  
+</table>
+
+</body>
+</html>
